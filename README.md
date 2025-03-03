@@ -59,3 +59,12 @@ npm run test:e2e
 ```sh
 npm run lint
 ```
+
+### 工具列表
+
+- 调色板
+- 强大的JSON
+- UUID生成
+- Network
+- 浏览器UserAgent
+- 图片生成
