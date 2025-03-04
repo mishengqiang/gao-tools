@@ -1,0 +1,41 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    display: table;
+    content: '';
+  }
+}
+
+@mixin ellipsis($line: 1) {
+  @if $line > 1 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@mixin safe-area-top($h: '0PX') {
+  padding-top: $h !important;
+
+  @supports (top: constant(safe-area-inset-top)) or
+    (top: env(safe-area-inset-top)) {
+    padding-top: calc(#{$h} + constant(safe-area-inset-top)) !important;
+    padding-top: calc(#{$h} + env(safe-area-inset-top)) !important;
+  }
+}
+
+@mixin safe-area-bottom($h: '0PX') {
+  padding-bottom: #{$h} !important;
+
+  @supports (bottom: constant(safe-area-inset-bottom)) or
+    (bottom: env(safe-area-inset-bottom)) {
+    padding-bottom: calc(#{$h} + constant(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(#{$h} + env(safe-area-inset-bottom)) !important;
+  }
+}
