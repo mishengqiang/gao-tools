@@ -4,7 +4,7 @@
     ".env": ".env*",
     "tsconfig.json": "tsconfig.*.json, *.d.ts",
     "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
-    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, stylelint*"
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, stylelint*, commitlint*,"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
