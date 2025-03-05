@@ -13,7 +13,7 @@
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "lint": "eslint . --fix && stylelint \"src/**/*.{css,scss,sass,vue}\" --fix",
+    "lint": "eslint . --fix && stylelint . --fix",
     "inspect:eslint": "eslint-config-inspector",
     "format": "prettier --write src/"
   },
@@ -66,11 +66,8 @@
     "npm": ">=8.1.0"
   },
   "lint-staged": {
-    "*.{ts,tsx,vue,js,jsx}": [
+    "*.*": [
       "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{css,scss,sass,vue}": [
       "stylelint --fix",
       "prettier --write"
     ]

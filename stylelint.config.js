@@ -5,7 +5,7 @@ export default {
     'stylelint-config-recess-order',
   ],
   plugins: ['stylelint-order'],
-  ignoreFiles: ['node_modules/**/*', 'dist/**/*', 'public/**/*'],
+  ignoreFiles: ['**/*', '!src/**/*.{css,scss,sass,vue}'],
   rules: {
     'color-function-notation': ['legacy', {}],
     'media-feature-range-notation': ['prefix'],
